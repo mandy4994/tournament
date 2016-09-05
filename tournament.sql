@@ -20,6 +20,7 @@ CREATE TABLE matches (
     loser SERIAL references players(player_id)
     );
 
+-- View for player standings
 DROP VIEW IF EXISTS standings;
 CREATE VIEW standings AS
 SELECT p.player_id as player_id, p.player_name,
